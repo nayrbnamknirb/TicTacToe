@@ -1,0 +1,35 @@
+﻿<Window x:Class="Assignment4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment4"
+        mc:Ignorable="d"
+        Title="Tic Tac Toe" Height="500" Width="600">
+    <Grid Name="Main" Background="#FFFF8080">
+        <Grid x:Name="GameCells" Width="315" Height="315" Margin="15,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black">
+            <Button x:Name="Cell1" Content="" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell2" Content="" HorizontalAlignment="Left" Margin="107.5,0,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" FontSize="80" FontFamily="DejaVu Sans" Foreground="Blue" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell3" Content="" HorizontalAlignment="Left" Margin="215,0,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell4" Content="" HorizontalAlignment="Left" Margin="0,107.5,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell5" Content="" HorizontalAlignment="Left" Margin="107.5,107.5,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell6" Content="" HorizontalAlignment="Left" Margin="215,107.5,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell7" Content="" HorizontalAlignment="Left" Margin="0,215,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell8" Content="" HorizontalAlignment="Left" Margin="107.5,215,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+            <Button x:Name="Cell9" Content="" HorizontalAlignment="Left" Margin="215,215,0,0" VerticalAlignment="Top" Background="Silver" Width="100" Height="100" Foreground="Red" FontSize="80" FontFamily="DejaVu Sans" Click="ButtonClick" BorderBrush="{x:Null}"/>
+        </Grid>
+        <GroupBox x:Name="StatsBox" Header="Statistics" Width="200" Height="140" Background="#FF80FF80" Margin="360,95,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="Black" FontWeight="Bold"/>
+        <Label x:Name="P1WinsLabel" Content="Player 1 Wins:" HorizontalAlignment="Right" Margin="0,130,120,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="P2WinsLabel" Content="Player 2 Wins:" HorizontalAlignment="Right" Margin="0,160,120,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="TiesLabel" Content="Ties:" HorizontalAlignment="Right" Margin="0,190,120,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="P1Wins" Content="0" HorizontalAlignment="Left" Margin="470,130,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="P2Wins" Content="0" HorizontalAlignment="Left" Margin="470,160,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="Ties" Content="0" HorizontalAlignment="Left" Margin="470,190,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="StartGame" Content="Start Game" HorizontalAlignment="Left" Margin="390,30,0,0" VerticalAlignment="Top" Background="Navy" Foreground="White" Width="100" Height="30" BorderBrush="White" FontSize="14" Click="ButtonClick"/>
+        <GroupBox x:Name="StatusBox" Header="Game Status" Width="310" Height="90" Background="#00000000" Margin="30,355,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="Black" FontWeight="Bold">
+            <ListView x:Name="StatusList" Margin="10,7,10,10" FontFamily="Consolas" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Height="60" Background="#FF80FFFF">
+                <ListViewItem x:Name="ListHeader" Content=""/>
+            </ListView>
+        </GroupBox>
+    </Grid>
+</Window>
